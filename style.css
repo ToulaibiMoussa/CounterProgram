@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100dvh;
+    height: 100vh;
+    font-size: clamp(2rem, 5vw, 6rem);
+    background: linear-gradient(120deg, blue 0% 30%, white 30% 70%, blue 70% 100%);
+    
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur (10px);
+    z-index: 999;
+    corner-shape: scoop;
+    box-shadow: 0 0 10px black;
+}
+
+.container {
+    margin: 2rem;
+}
+
+button {
+    font-size: clamp(1rem, 2vw, 4rem);
+    padding: 10px 20px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 20px;
+    margin-top: 1rem;
+    text-shadow: 0 0 3px  black;
+    transition: 0.2s;
+    cursor: pointer;
+    /* box-shadow: 3px 3px 8px aliceblue; */
+}
+
+label {
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(1.1) rotate(5deg);
+    background-color: darkblue;
+}   
+
+
+.div {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    corner-shape: scoop;
+    /* filter: blur(60px); */
+    z-index: -1;
+}
+
+#div1 {
+    background-color: rgb(47, 0, 255);
+    top: 20px;
+    left: 15%;
+    animation: div1 5s ease infinite alternate;
+}
+
+#div3 {
+    background-color: red;
+    top: 40px;
+    left: 65%;
+    animation: div2 8s ease infinite alternate;
+}
+
+#div2 {
+    background-color: red;
+    top: 20vh;
+    left: 70%;
+    animation: div3 2s linear infinite alternate;
+}
+
+#div4 {
+    background-color: hsla(243, 100%, 50%, 0.819);
+    top: 60vh;
+    left: 35%;
+    animation: div4 14s ease infinite alternate;
+}
+
+@keyframes div1 {
+    from {
+        transform: translate(600px, 90px) rotate(360deg) scale(1);
+    } to {
+        transform: translate(0) scale(0.4);
+        
+    }
+}
+
+@keyframes div2 {
+    from {
+        transform: translateY(60vh) rotate(360deg);
+    } to {
+        transform: translate(0) scale(0.4) rotate(0);
+        
+    }
+}
+
+@keyframes div3 {
+    0% {
+        transform: translateX(-700px) rotate(360deg);
+    } 50% {
+        transform: translateY(200px) scale(0.3) rotate(212deg);
+        opacity: 0.4;  
+    } 100% {
+        transform: translateY(0) scale(1) rotate(0);
+    }
+}
+
+@keyframes div4 {
+    from {
+        transform: translateX(-500px) scale(0.4) rotate(40deg);
+    } to {
+        transform: translate(0) scale(1);
+    }
+}
