@@ -10,11 +10,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-height: 100dvh;
-    max-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100vh;
     font-size: clamp(2rem, 5vw, 6rem);
     background: linear-gradient(120deg, blue 0% 30%, white 30% 70%, blue 70% 100%);
-    
     overflow: hidden;
 }
 
@@ -133,3 +132,4 @@ button:active {
     }
 
 }
+
